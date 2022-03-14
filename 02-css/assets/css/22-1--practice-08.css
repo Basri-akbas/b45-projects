@@ -1,0 +1,43 @@
+:root {
+  --color1: #66282a;
+  --color2: #dec029;
+  --color3: #c6c1b0;
+}
+nav.menu {
+  background-color: var(--color1);
+  text-align: center;
+}
+nav.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+nav.menu > ul > li {
+  display: inline-block;
+  background-color: var(--color2);
+  position: relative;
+}
+nav.menu > ul > li:hover {
+  background-color: var(--color3);
+}
+nav.menu > ul > li:hover ul {
+  display: inline-block;
+}
+nav.menu ul ul {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 35px;
+  background-color: var(--color3);
+  text-align: left;
+}
+nav.menu a {
+  text-decoration: none;
+  color: var(--color1);
+  padding: 0.5rem 1rem 0.5rem;
+  display: inline-block;
+}
+nav.menu ul ul a:hover {
+  background-color: var(--color2);
+  display: block;
+}

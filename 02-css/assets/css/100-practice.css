@@ -1,0 +1,47 @@
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: bisque;
+}
+section {
+  text-align: center;
+}
+header {
+  background-color: beige;
+}
+a {
+  color: black;
+  text-decoration: none;
+  padding: 0 25px 0 25px;
+}
+a:hover {
+  background-color: aqua;
+}
+footer {
+  border: 1px solid black;
+}
+footer a:hover {
+  background-color: powderblue;
+}
+p {
+  background-color: beige;
+  border: 1px solid blue;
+  font-weight: 400;
+}
+p:hover {
+  background-color: aqua;
+}
+ul {
+  list-style-position: inside;
+  list-style-type: circle;
+}
+li {
+  text-align: center;
+  width: 100px;
+  padding: 10px;
+  margin-left: 45%;
+  margin-right: 45%;
+}
+
+li:hover {
+  background-color: powderblue;
+}

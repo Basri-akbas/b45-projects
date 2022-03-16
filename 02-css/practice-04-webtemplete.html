@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      :root {
+        --color1: #00a818;
+        --color2: #3f8ab5;
+      }
+
+      body {
+        font-family: Montserrat;
+        color: #222222;
+        padding: 0;
+        margin: 0;
+      }
+
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 1rem;
+      }
+
+      img {
+        width: 100%;
+      }
+
+      header .logo {
+        width: 300px;
+        height: 50px;
+      }
+
+      header nav.menu ul {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        gap: 1rem;
+      }
+
+      header nav.menu a {
+        text-decoration: none;
+        background-color: var(--color1);
+        color: white;
+        padding: 0.5rem 1rem;
+        display: inline-block;
+      }
+
+      header nav.menu a:hover {
+        background-color: var(--color2);
+      }
+
+      section.content {
+        display: flex;
+        gap: 2rem;
+        margin-top: 2rem;
+        flex-wrap: wrap;
+        padding: 2rem;
+      }
+
+      main {
+        flex: 4;
+        min-width: 200px;
+      }
+
+      aside {
+        flex: 1;
+        background-color: #ececec;
+        padding: 1rem;
+      }
+
+      main .about-us {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+
+      main .about-us div {
+        flex: 3;
+        min-width: 100px;
+      }
+
+      main .about-us p {
+        flex: 5;
+      }
+
+      footer {
+        background-color: #efefef;
+        display: flex;
+        justify-content: space-evenly;
+        padding: 2rem;
+        flex-wrap: wrap;
+        gap: 2rem;
+      }
+
+      footer img {
+        width: 250px;
+      }
+
+      footer .menu,
+      footer .contact {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      footer .contact i {
+        color: var(--color1);
+      }
+
+      footer .menu {
+        gap: 0.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <img
+        class="logo"
+        src="https://techproeducation.com/wp-content/uploads/2022/01/Calisma-Yuzeyi-1-kopya-5-1-768x126.png"
+      />
+
+      <nav class="menu">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Products</a></li>
+          <li><a href="#">References</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="content">
+      <main>
+        <section class="about-us">
+          <div>
+            <img
+              src="https://www.dreamhost.com/blog/wp-content/uploads/2020/11/310ad4be-c64b-40c2-af35-7aeaf85dcb96_Great-about-us-pages-opt.jpg"
+              width="200"
+            />
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
+            mollitia, molestiae quas
+          </p>
+        </section>
+      </main>
+      <aside>
+        <div class="box">
+          <h3>Popular Product</h3>
+          <p>
+            <img
+              src="https://c.s-microsoft.com/en-us/CMSImages/1920_Panel01_PriorityFeature_AIO.jpg?version=d00cfd4a-79e3-44f9-f40c-d159e4e89a9d"
+            />
+          </p>
+        </div>
+
+        <div class="box">
+          <h3>Latest Blog</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
+            mollitia, molestiae quas
+          </p>
+        </div>
+      </aside>
+    </section>
+
+    <footer>
+      <div>
+        <img
+          src="https://techproeducation.com/wp-content/uploads/2022/01/Calisma-Yuzeyi-1-kopya-5-1-768x126.png"
+        />
+      </div>
+      <div>
+        <ul class="contact">
+          <li>
+            <i class="fa-solid fa-address-card"></i> 7980 Walt Whitman Street
+            San Antonio, TX 78230
+          </li>
+          <li><i class="fa-solid fa-phone"></i> +1 (455) 8789 87 54</li>
+          <li><i class="fa-solid fa-envelope"></i> info@asdasd.com</li>
+        </ul>
+      </div>
+      <div>
+        <nav>
+          <ul class="menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">References</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>

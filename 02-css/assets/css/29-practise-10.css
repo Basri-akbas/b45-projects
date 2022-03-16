@@ -1,0 +1,28 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    gap:1rem;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 2rem;
+}
+
+header .logo img{
+    width:300px;
+}
+
+header .menu ul{
+    display:flex;
+    list-style: none;
+    padding: 0;
+    margin:0;
+    gap: 1rem;
+}
+
+header .menu a{
+    text-decoration: none;
+    background-color: #FBB040;
+    color:black;
+    padding:0.5rem 1rem;
+    border-radius: 0.5rem;
+}

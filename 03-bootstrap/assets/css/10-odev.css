@@ -1,0 +1,18 @@
+header nav.menu ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 1rem;
+}
+.xx {
+  text-align: right;
+}
+header .col-1 a {
+  color: yellow;
+}
+@media (max-width: 768px) {
+  .abc {
+    display: none;
+  }
+}

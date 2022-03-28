@@ -1,0 +1,1 @@
+console.log("Bu satirlar harici dosyadan geldi.");

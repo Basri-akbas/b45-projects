@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .blight {
+        background-color: white;
+        color: black;
+      }
+      .bdark {
+        background-color: rgb(39, 37, 37);
+        color: white;
+      }
+      .btn {
+        margin: 5rem;
+        padding: 1rem;
+        border-radius: 1rem;
+      }
+      .lightMode {
+        background-color: white;
+        color: black;
+      }
+      .darkMode {
+        background-color: black;
+        color: white;
+      }
+    </style>
+  </head>
+  <body class="body">
+    <button class="btn" id="btn" onclick="degistir()">Dark Mode</button>
+    <p style="margin: 2rem">
+      <span
+        >Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa quae
+        minima veritatis illo cum voluptatibus, laudantium nobis cupiditate in
+        natus mollitia ipsam harum consequuntur labore enim doloremque velit
+        eligendi? Quo.Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+        Quasi dolorum voluptatem odio fugiat voluptate praesentium ex rerum,
+        omnis voluptatum error illum iste inventore nihil deserunt beatae culpa
+        saepe! Commodi, rem?Lorem ipsum dolor sit amet consectetur, adipisicing
+        elit. Quasi dolorum voluptatem odio fugiat voluptate praesentium ex
+        rerum, omnis voluptatum error illum iste inventore nihil deserunt beatae
+        culpa saepe! Commodi, rem?Lorem ipsum dolor sit amet consectetur,
+        adipisicing elit. Quasi dolorum voluptatem odio fugiat voluptate
+        praesentium ex rerum, omnis voluptatum error illum iste inventore nihil
+        deserunt beatae culpa saepe! Commodi, rem?</span
+      ><br /><span
+        >Consequuntur minima odit aliquid soluta totam voluptas quae pariatur ut
+        assumenda culpa ipsam sequi possimus necessitatibus cupiditate inventore
+        sint animi accusamus minus debitis voluptatibus, quia sit repudiandae.
+        Vitae, totam veniam.Lorem ipsum dolor sit amet consectetur, adipisicing
+        elit. Quasi dolorum voluptatem odio fugiat voluptate praesentium ex
+        rerum, omnis voluptatum error illum iste inventore nihil deserunt beatae
+        culpa saepe! Commodi, rem?Lorem ipsum dolor sit amet consectetur,
+        adipisicing elit. Quasi dolorum voluptatem odio fugiat voluptate
+        praesentium ex rerum, omnis voluptatum error illum iste inventore nihil
+        deserunt beatae culpa saepe! Commodi, rem?Lorem ipsum dolor sit amet
+        consectetur, adipisicing elit. Quasi dolorum voluptatem odio fugiat
+        voluptate praesentium ex rerum, omnis voluptatum error illum iste
+        inventore nihil deserunt beatae culpa saepe! Commodi, rem?</span
+      >
+    </p>
+
+    <script>
+      function degistir() {
+        let still = document.querySelector("#btn").innerText;
+        console.log(still);
+        if (still == "Dark Mode") {
+          document.querySelector("#btn").classList.add("darkMode");
+          document.querySelector("body").classList.add("bdark");
+          let stilld = document.querySelector("#btn").innerText;
+          let yeni = stilld.replace("Dark Mode", "Light Mode");
+          console.log(yeni);
+          dokument.querySelector("#btn").innerText = yeni;
+        } else {
+          document.querySelector("#btn").classList.add("lightMode");
+          document.querySelector("body").classList.add("blight");
+          let stilld = document.querySelector("#btn").innerText;
+          let yeni = stilld.replace("Light Mode", "Dark Mode");
+          console.log(yeni);
+          dokument.querySelector("#btn").innerText = yeni;
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .ana {
+        border-style: solid;
+        border-radius: 2rem;
+        border-color: black;
+        width: 35%;
+        margin: 5rem;
+        padding: 2rem 2rem 0rem 2rem;
+      }
+      #sonuc {
+        padding: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="ana">
+      <input type="number" id="number" placeholder="Bir sayi giriniz" />
+      <button onclick="tahminEt()">Tahmin Et</button>
+      <button onclick="randomSayi()">Oyunu Baslat</button>
+      <div id="sonuc"></div>
+    </div>
+
+    <script>
+      let sayi = Math.floor(Math.random() * (100 - 1 + 1)) + 1;
+      let adet = 0;
+
+      function randomSayi() {
+        alert("10 Hakkiniz Var!");
+        return sayi;
+      }
+
+      function tahminEt() {
+        let tahmin = Number(document.querySelector("#number").value);
+
+        if (!tahmin || isNaN(tahmin) || tahmin <= 0) {
+          alert("Lütfen 0'den büyük bir sayı giriniz");
+          return;
+        }
+
+        if (tahmin > sayi) {
+          document.querySelector("#sonuc").innerText =
+            "Daha kucuk bir sayi giriniz";
+          adet++;
+          return;
+        } else if (tahmin < sayi) {
+          document.querySelector("#sonuc").innerText =
+            "Daha buyuk bir sayi giriniz";
+          adet++;
+          return;
+        } else {
+          document.querySelector("#sonuc").innerText =
+          adet++;
+            "Tebrikler " + adet + " seferde bildiniz";
+        }
+        if (adet == 10) {
+          document.querySelector("#sonuc").innerText = "Oyun bitti";
+          alert("Oyun bitti");
+        }
+      }
+    </script>
+  </body>
+</html>

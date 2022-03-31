@@ -6,10 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-      .blight {
-        background-color: white;
-        color: black;
-      }
       .bdark {
         background-color: rgb(39, 37, 37);
         color: white;
@@ -19,10 +15,7 @@
         padding: 1rem;
         border-radius: 1rem;
       }
-      .lightMode {
-        background-color: white;
-        color: black;
-      }
+
       .darkMode {
         background-color: black;
         color: white;
@@ -64,23 +57,23 @@
     </p>
 
     <script>
+      let still = "Dark Mode";
+      document.querySelector("#btn").innerText = still;
+
       function degistir() {
-        let still = document.querySelector("#btn").innerText;
         console.log(still);
         if (still == "Dark Mode") {
           document.querySelector("#btn").classList.add("darkMode");
           document.querySelector("body").classList.add("bdark");
-          let stilld = document.querySelector("#btn").innerText;
-          let yeni = stilld.replace("Dark Mode", "Light Mode");
-          console.log(yeni);
-          dokument.querySelector("#btn").innerText = yeni;
+          still = "Light Mode";
+          document.querySelector("#btn").innerText = still;
         } else {
-          document.querySelector("#btn").classList.add("lightMode");
-          document.querySelector("body").classList.add("blight");
-          let stilld = document.querySelector("#btn").innerText;
-          let yeni = stilld.replace("Light Mode", "Dark Mode");
-          console.log(yeni);
-          dokument.querySelector("#btn").innerText = yeni;
+          document.querySelector("#btn").classList.remove("darkMode");
+          document.querySelector("body").classList.remove("bdark");
+
+          still = "Dark Mode";
+
+          document.querySelector("#btn").innerText = still;
         }
       }
     </script>

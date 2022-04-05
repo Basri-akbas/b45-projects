@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let isim = "Ahmet";
+      let yas = 17;
+      let dogumYeri = "İzmir";
+
+      let metin =
+        "Benim isimim " +
+        isim +
+        ", " +
+        yas +
+        " yaşındayım ve " +
+        dogumYeri +
+        " doğumluyum";
+
+      let metin2 = `Benim ismim ${isim}, ${yas} yaşındayım ve ${dogumYeri} doğumluyum`;
+
+      console.log(metin);
+      console.log(metin2);
+
+      let card = `<div class="card" style="width: 18rem;">
+                    <img src="${foto}" class="card-img-top" alt="${title}">
+                    <div class="card-body">
+                        <h5 class="card-title">${title}</h5>
+                        <p class="card-text">${description}</p>
+                        <a href="${link}" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                    </div>`;
+    </script>
+  </body>
+</html>

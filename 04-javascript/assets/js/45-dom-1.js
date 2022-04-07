@@ -35,6 +35,8 @@ document.querySelectorAll(".btn-delete").forEach(btn=>{
         
         const isim = e.target.closest("tr").querySelector("td:first-child").innerText;
         confirm(`${isim} isimli kaydı silmek istediğinizden emin misiniz?`);
+        e.target.closest("tr").remove();
     });
 })
+
 

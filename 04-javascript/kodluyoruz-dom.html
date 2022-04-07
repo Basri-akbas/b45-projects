@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="counterDOM">100</div>
+    <button id="increase">Artir</button>
+    <button id="decrease">Azalt</button>
+
+    <script>
+      let counter = 0;
+      let counterDOM = document.querySelector("#counterDOM");
+      let increaseDOM = document.querySelector("#increase");
+      let decreaseDOM = document.querySelector("#decrease");
+
+      counterDOM.innerHTML = counter;
+
+      increaseDOM.addEventListener("click", click);
+      decreaseDOM.addEventListener("click", click);
+
+      function click(e) {
+        console.log(this);
+        console.log(e);
+        this.id == "increase" ? (counter += 1) : (counter -= 1);
+        counterDOM.innerHTML = counter;
+      }
+    </script>
+  </body>
+</html>

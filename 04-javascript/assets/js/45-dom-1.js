@@ -34,8 +34,10 @@ document.querySelectorAll(".btn-delete").forEach(btn=>{
     btn.addEventListener("click", (e)=>{
         
         const isim = e.target.closest("tr").querySelector("td:first-child").innerText;
-        confirm(`${isim} isimli kaydı silmek istediğinizden emin misiniz?`);
-        e.target.closest("tr").remove();
+        let onay=confirm(`${isim} isimli kaydı silmek istediğinizden emin misiniz?`);
+        if(onay){
+            e.target.closest("tr").remove();
+        }
     });
 })
 

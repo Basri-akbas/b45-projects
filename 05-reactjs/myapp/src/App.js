@@ -10,24 +10,27 @@ import StyleExternal from "./components/09-style-external";
 import Clock1 from "./components/10-clock1";
 import Props from "./components/11-props";
 import Clock2 from "./components/12-clock2";
-
+import Image from "./components/13-image";
+import ImagePractise from "./components/14-image-practise";
 function App() {
   return (
     <div className="App">
     {/*  <HelloWorld/>
-       <Comp/>
+      <Comp/>
       <Jsx/>
       <Jsx2/>
-  <JsxLoop/>
-  <JsxPractise/>
-  <StyleInline/>
-  <StyleInternal/>
-    <StyleExternal/>
-    <Clock1/> */}
+      <JsxLoop/>
+      <JsxPractise/>
+      <StyleInline/>
+      <StyleInternal/>
+      <StyleExternal/>
+      <Clock1/>
+      <Props ad="Basri" yas="35"/>
+      <Clock2/>
+      <Clock2  color="white" bgColor="black"/>
+      <Image/> */}
     
-    <Props ad="Basri" yas="35"/>
-    <Clock2/>
-     <Clock2  color="white" bgColor="black"/>
+     <ImagePractise/>
     </div>
   );
 }

@@ -19,6 +19,10 @@ import State from "./components/20-state";
 import Counter from "./components/21-counter";
 import Birthday from "./components/22-birthday/birthday"
 import Clock3 from "./components/23-clock-3";
+import UseEffect2 from "./components/24-useeffect-2";
+import RandomImage from "./components/25-random-image";
+import RandomImage2 from "./components/26-random-image-2";
+
 function App() {
   return (
     <div className="App">
@@ -51,6 +55,8 @@ function App() {
      <Birthday/> */}
     
      <Clock3/>
+     <UseEffect2/>
+     <RandomImage/>
      
     </div>
   );

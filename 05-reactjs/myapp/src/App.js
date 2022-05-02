@@ -22,6 +22,7 @@ import Clock3 from "./components/23-clock-3";
 import UseEffect2 from "./components/24-useeffect-2";
 import RandomImage from "./components/25-random-image";
 import RandomImage2 from "./components/26-random-image-2";
+import UserCards from "./components/27-usercards/user-cards";
 
 function App() {
   return (
@@ -52,11 +53,13 @@ function App() {
      <Stateless/>
      <State/>
      <Counter/>
-     <Birthday/> */}
-    
+     <Birthday/> 
      <Clock3/>
      <UseEffect2/>
      <RandomImage/>
+     <RandomImage2/>*/}
+    
+     <UserCards/>
      
     </div>
   );

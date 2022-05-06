@@ -17,14 +17,43 @@ function App() {
     );
   };
 
+  const removeNote = (id) => {
+    if (!id) return;
+
+    axios
+      .delete(`https://jsonplaceholder.typicode.com/posts/${id}`)
+      .then((resp) => {
+        /* 1. alternatif */
+        const arr = notes.filter(item=> item.id != id);
+        setNotes(arr);
+
+        /* ikinci alternatif */
+        // loadNotes();
+
+        alert("Note was deleted");
+      })
+      .catch(err=> {
+        console.log(err);
+        alert("An error occured");
+      })
+  };
+
+  const createNote = (note) => {
+    alert("ok");
+    axios.post("https://jsonplaceholder.typicode.com/posts", note)
+    .then(resp=>{
+      setNotes([resp.data, ...notes]);
+    })
+  }
+
   return (
     <Container>
-      <Row>
+      <Row className="g-5">
         <Col md={3}>
-          <NoteForm />
+          <NoteForm createNote={createNote}/>
         </Col>
         <Col md={9}>
-          <Notes data={notes} />
+          <Notes data={notes} removeNote={removeNote} />
         </Col>
       </Row>
     </Container>

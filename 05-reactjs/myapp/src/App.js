@@ -24,7 +24,9 @@ import RandomImage from "./components/25-random-image";
 import RandomImage2 from "./components/26-random-image-2";
 import UserCards from "./components/27-usercards/user-cards";
 import Countries from "./components/28-countries/countries";
-
+import Form1 from "./components/29-forms/form1";
+import Form3 from "./components/29-forms/form3";
+import Form4 from "./components/29-forms/form4";
 function App() {
   return (
     <div className="App">
@@ -59,10 +61,13 @@ function App() {
      <UseEffect2/>
      <RandomImage/>
      <RandomImage2/>
-     <UserCards/>*/}
-    
-     
+     <UserCards/> 
      <Countries/>
+     <Form1/>
+     <Form3/> */}
+    
+     <Form4/>
+     
      
     </div>
   );

@@ -1,6 +1,6 @@
 import HelloWorld from "./components/01-hello-world";
-import Comp from "./components/02-comp";
-import Jsx from "./components/03-jsx";
+import Comp from './components/02-comp';
+import Jsx, {test1, test2} from "./components/03-jsx";
 import Jsx2 from "./components/04-jsx2";
 import JsxLoop from "./components/05-jsx-loop";
 import JsxPractise from "./components/06-jsx-practise";
@@ -13,11 +13,13 @@ import Clock2 from "./components/12-clock2";
 import Image from "./components/13-image";
 import ImagePractise from "./components/14-image-practise";
 import ProfileCard from "./components/15-profile-card";
-import Shop from "./components/18-bootstrap-practice/shop"
-import Stateless from "./components/19-stateless";
-import State from "./components/20-state";
+import BootstrapStatic from "./components/16-bootstrap-static";
+import BootstrapDinamik from "./components/17-bootstrap-dinamik";
+import State from "./components/19-stateless";
+import Stateless from "./components/20-state";
 import Counter from "./components/21-counter";
-import Birthday from "./components/22-birthday/birthday"
+import Birthday from "./components/22-birthday/birthday";
+import UseEffect from "./components/22-useEffect";
 import Clock3 from "./components/23-clock-3";
 import UseEffect2 from "./components/24-useeffect-2";
 import RandomImage from "./components/25-random-image";
@@ -27,49 +29,99 @@ import Countries from "./components/28-countries/countries";
 import Form1 from "./components/29-forms/form1";
 import Form3 from "./components/29-forms/form3";
 import Form4 from "./components/29-forms/form4";
-function App() {
+import Form5 from "./components/29-forms/form5";
+import Shop from "./components/18-bootstrap-practice/shop";
+import {BrowserRouter, Route, Routes} from "react-router-dom";
+import Header from "./components/00-header";
+import { Col, Container, Row } from "react-bootstrap";
+import Menu from "./components/00-menu";
+
+
+const App = () => {
+
   return (
-    <div className="App">
-    {/*  <HelloWorld/>
-      <Comp/>
-      <Jsx/>
-      <Jsx2/>
-      <JsxLoop/>
-      <JsxPractise/>
+    <BrowserRouter>
+      <Header/>
+      <Container fluid>
+        <Row>
+          <Col md={3} className="bg-light"><Menu/></Col>
+          <Col md={9}>
+
+              <Routes>
+                <Route path="/hello-world" element={<HelloWorld/>}/>
+                <Route path="/comp" element={<Comp/>}/>
+                <Route path="/jsx1" element={<Jsx/>}/>
+                <Route path="/jsx2" element={<Jsx2/>}/>
+                <Route path="/jsx3" element={<JsxLoop/>}/>
+                <Route path="/jsx4" element={<JsxPractise/>}/>
+                <Route path="/useeffect-2" element={<UseEffect2/>}/>
+                <Route path="/clock1" element={<Clock1/>}/>
+                <Route path="28-countries/countries" element={<Countries/>}/>
+                <Route path="/random-image" element={<RandomImage/>}/>
+                <Route path="/state" element={<State/>}/>
+                <Route path="/profile-card" element={<ProfileCard 
+                                                      name="Ali veliy" 
+                                                      location="İstanbul, Türkiye" 
+                                                      avatar="profile.jpg" 
+                                                      shot="4" 
+                                                      followers="4523" 
+                                                      followings="50"/>}/>
+                <Route path="/27-usercards/user-cards" element={<UserCards/>}/>
+                <Route path="/29-forms/form5" element={<Form5/>}/>
+                <Route path="/18-bootstrap-practice/shop" element={<Shop/>}/>
+              </Routes>
+
+
+
+          </Col>
+        </Row>
+      </Container>
+
+
+{/*       
+      
+
       <StyleInline/>
       <StyleInternal/>
       <StyleExternal/>
       <Clock1/>
-      <Props ad="Basri" yas="35"/>
+      <Props ad="Metin" yas="33"/>
+      <Clock2 color="red" bgColor="gray"/>
+      <Clock2 color="yellow" bgColor="navy"/>
       <Clock2/>
-      <Clock2  color="white" bgColor="black"/>
-      <Image/> 
+      <Image/>
       <ImagePractise/>
-      <ProfileCard 
-    name="Ali Gel" 
-    location="Istanbul,Turkey" 
-     avatar="profile.jpg" 
-     shot="4" 
-     followers="4536" 
-     followings="150"/> 
-     <Shop/>
-     <Stateless/>
-     <State/>
-     <Counter/>
-     <Birthday/> 
-     <Clock3/>
-     <UseEffect2/>
-     <RandomImage/>
-     <RandomImage2/>
-     <UserCards/> 
-     <Countries/>
-     <Form1/>
-     <Form3/> */}
+       <ProfileCard 
+      name="Ali Gel" 
+      location="İstanbul, Türkiye" 
+      avatar="profile.jpg" 
+      shot="4" 
+      followers="4523" 
+      followings="50"/>
+      <BootstrapStatic/>
+      <BootstrapDinamik/>
+      <Shop/>
+      <Stateless/>
+      <State/>
+      <Counter/>
+      <Birthday/>
+      <UseEffect/>
+      <Clock3/>
+      <UseEffect2/>
+      <RandomImage/>
+      <RandomImage2/>
+      <UserCards/>
+      <Countries/>
+      <Form1/>
+      <Form2/>
+      <Form3/>
+      <Form4/>
+      <Form5/>
+ */}    
     
-     <Form4/>
-     
-     
-    </div>
+      
+    
+ </BrowserRouter>
   );
 }
 

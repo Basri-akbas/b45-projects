@@ -14,7 +14,7 @@ const Stateless = () => {
     }
 
   return (
-    <div>
+    <div className="m-5">
         <b>{counter}</b>
         <button onClick={artir} >Artır</button>
     </div>

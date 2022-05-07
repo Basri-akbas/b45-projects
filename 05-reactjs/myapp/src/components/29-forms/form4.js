@@ -55,6 +55,9 @@ const Form4 = () => {
             value={formData.firstName}
             onChange={handleFormData}
           />
+          <Form.Control.Feedback type="invalid">
+            Please choose a correct username.
+          </Form.Control.Feedback>
         </Form.Group>
 
         <Form.Group className="mb-3">
@@ -68,6 +71,9 @@ const Form4 = () => {
             value={formData.lastName}
             onChange={handleFormData}
           />
+          <Form.Control.Feedback type="invalid">
+            Please choose a correct lastname.
+          </Form.Control.Feedback>
         </Form.Group>
 
         <Form.Group className="mb-3">
@@ -79,6 +85,9 @@ const Form4 = () => {
             value={formData.email}
             onChange={handleFormData}
           />
+          <Form.Control.Feedback type="invalid">
+            Please choose a correct email.
+          </Form.Control.Feedback>
         </Form.Group>
 
         <Form.Group className="mb-3">

@@ -10,7 +10,7 @@ const HelloWorld=()=>{
 
     return(
         <>  {/*Fragmant etkisiz bir ana kolon koymaya yariyor*/}
-        <div id="d1">Hello World
+        <div id="d1" className="m-5">Hello World
             <Comp/>
             <b>User name: {user.userName}</b>
         </div>

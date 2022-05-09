@@ -35,11 +35,31 @@ import {BrowserRouter, Route, Routes} from "react-router-dom";
 import Header from "./components/00-header";
 import { Col, Container, Row } from "react-bootstrap";
 import Menu from "./components/00-menu";
-
+import {StoreContext} from "./store";
+import {useEffect,useState} from "react";
+import axios from "axios";
+import SetContext from "./components/30-set-context";
+import GetContext from "./components/31-get-context";
+import Exchange from "./components/32-exchange/exchange";
 
 const App = () => {
+  const [color, setColor] = useState("blue");
+  const [rates, setRates] = useState({});
+
+  const getRates = () => { 
+    axios("https://api.frankfurter.app/latest?from=try")
+    .then(resp=>{
+      setRates(resp.data.rates);
+    })
+  }
+
+  useEffect(() => {
+    getRates();
+  }, [])
 
   return (
+
+    <StoreContext.Provider  value={{color,setColor,rates}}>
     <BrowserRouter>
       <Header/>
       <Container fluid>
@@ -56,7 +76,7 @@ const App = () => {
                 <Route path="/jsx4" element={<JsxPractise/>}/>
                 <Route path="/useeffect-2" element={<UseEffect2/>}/>
                 <Route path="/clock1" element={<Clock1/>}/>
-                <Route path="28-countries/countries" element={<Countries/>}/>
+                <Route path="countries" element={<Countries/>}/>
                 <Route path="/random-image" element={<RandomImage/>}/>
                 <Route path="/state" element={<State/>}/>
                 <Route path="/profile-card" element={<ProfileCard 
@@ -66,9 +86,17 @@ const App = () => {
                                                       shot="4" 
                                                       followers="4523" 
                                                       followings="50"/>}/>
-                <Route path="/27-usercards/user-cards" element={<UserCards/>}/>
-                <Route path="/29-forms/form5" element={<Form5/>}/>
-                <Route path="/18-bootstrap-practice/shop" element={<Shop/>}/>
+                <Route path="user-cards" element={<UserCards/>}/>
+                <Route path="form5" element={<Form5/>}/>
+                <Route path="form4" element={<Form4/>}/>
+                <Route path="form3" element={<Form3/>}/>
+                <Route path="shop" element={<Shop/>}/>
+                <Route path="birthday" element={<Birthday/>}/>
+                <Route path="style-external" element={<StyleExternal/>}/>
+                <Route path="bootstrap-dinamik" element={<BootstrapDinamik/>}/>
+                <Route path="set-context" element={<SetContext/>}/>
+                <Route path="get-context" element={<GetContext/>}/>
+                <Route path="/exchange" element={<Exchange/>}/>
               </Routes>
 
 
@@ -121,7 +149,8 @@ const App = () => {
     
       
     
- </BrowserRouter>
+     </BrowserRouter>
+    </StoreContext.Provider>
   );
 }
 

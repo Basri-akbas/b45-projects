@@ -29,6 +29,7 @@ const Menu = () => {
           <li><Link to="set-context">SetContext</Link></li>
           <li><Link to="get-context">GetContext</Link></li>
           <li><Link to="/exchange">Exchange</Link></li>
+          <li><Link to="/dashboard">Admin Panel</Link></li>
       </ul>
     </Container>
   )

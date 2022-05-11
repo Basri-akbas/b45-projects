@@ -41,7 +41,8 @@ import axios from "axios";
 import SetContext from "./components/30-set-context";
 import GetContext from "./components/31-get-context";
 import Exchange from "./components/32-exchange/exchange";
-
+import Dashboard from "./components/33-children-props/dashboard";
+import Users from "./components/33-children-props/users";
 const App = () => {
   const [color, setColor] = useState("blue");
   const [rates, setRates] = useState({});
@@ -97,6 +98,8 @@ const App = () => {
                 <Route path="set-context" element={<SetContext/>}/>
                 <Route path="get-context" element={<GetContext/>}/>
                 <Route path="/exchange" element={<Exchange/>}/>
+                <Route path="/dashboard" element={<Dashboard/>}/>
+                <Route path="/users" element={<Users/>}/>
               </Routes>
 
 

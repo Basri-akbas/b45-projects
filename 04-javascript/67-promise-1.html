@@ -1,26 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1 id="sonuc"></h1>
     <button id="btnHesapla">Hesapla</button>
 
     <script>
-        const soz1 = () => {
+      const soz1 = () => {
         return new Promise((resolve, reject) => {
           // çeşitli kodlar
-          if (true) {
+          if (false) {
             resolve("Beklenen sonuç");
           } else {
             reject("Hata");
           }
         });
       };
+
+      document.querySelector("#btnHesapla").addEventListener("click", () => {
+        soz1()
+          .then((resp) => {
+            document.querySelector("#sonuc").innerHTML = resp;
+            console.log("promise başarılı");
+          })
+          .catch((err) => {
+            document.querySelector("#sonuc").innerHTML = err;
+            console.log("promise başarısız");
+          });
+
+        console.log("sonraki kodlar");
+        
+
+
+      });
     </script>
-</body>
+  </body>
 </html>

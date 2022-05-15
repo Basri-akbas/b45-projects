@@ -1,0 +1,43 @@
+.yapildi {
+  text-decoration: line-through;
+}
+.main {
+  margin-top: 5rem;
+  margin-left: 25rem;
+  padding: 1rem;
+
+}
+.input{
+  width: 20rem;
+  height: 1.7rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding-left: 1rem;
+  margin-bottom: 1rem;
+  margin-right: 1rem;
+}
+
+.button{
+  width: 15rem;
+  height: 2rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+.kelime{
+  width: 20rem;
+  padding-left: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  
+}
+.ekle{
+  width: 5rem;
+    height: 2rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    cursor: pointer;
+}
